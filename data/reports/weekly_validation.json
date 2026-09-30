@@ -1,0 +1,13 @@
+{
+  "selection": {
+    "sport": "NFL",
+    "season": 2026,
+    "season_type": "REG",
+    "week": 4,
+    "date": null,
+    "view": "upcoming"
+  },
+  "games": 16,
+  "players": 425,
+  "aj_brown": []
+}

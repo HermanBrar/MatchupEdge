@@ -1,0 +1,232 @@
+{
+  "model": "matchup-ridge-empirical-v2",
+  "generated_at": "2026-09-29T22:44:44.688354+00:00",
+  "metrics": {
+    "Passing yards": {
+      "train_n": 707,
+      "calibration_n": 265,
+      "test_n": 251,
+      "train_before": "2025-10-19T20:25:00+00:00",
+      "test_from": "2025-12-16T01:15:00+00:00",
+      "evaluation": "chronological held-out; retrospective revised stats, not archived as-of data",
+      "mae": 72.37310381117042,
+      "interval_80_coverage": 0.7529880478087649,
+      "threshold_brier": 0.22187232557842676,
+      "validation_threshold": 220.5
+    },
+    "Rushing yards": {
+      "train_n": 2422,
+      "calibration_n": 931,
+      "test_n": 828,
+      "train_before": "2025-10-19T20:25:00+00:00",
+      "test_from": "2025-12-16T01:15:00+00:00",
+      "evaluation": "chronological held-out; retrospective revised stats, not archived as-of data",
+      "mae": 17.89632855430502,
+      "interval_80_coverage": 0.783816425120773,
+      "threshold_brier": 0.17787766768552454,
+      "validation_threshold": 19.5
+    },
+    "Receiving yards": {
+      "train_n": 5776,
+      "calibration_n": 2286,
+      "test_n": 2002,
+      "train_before": "2025-10-19T20:25:00+00:00",
+      "test_from": "2025-12-16T01:15:00+00:00",
+      "evaluation": "chronological held-out; retrospective revised stats, not archived as-of data",
+      "mae": 16.512409069495682,
+      "interval_80_coverage": 0.8036963036963037,
+      "threshold_brier": 0.18826966277469512,
+      "validation_threshold": 15.5
+    },
+    "Receptions": {
+      "train_n": 5776,
+      "calibration_n": 2286,
+      "test_n": 2002,
+      "train_before": "2025-10-19T20:25:00+00:00",
+      "test_from": "2025-12-16T01:15:00+00:00",
+      "evaluation": "chronological held-out; retrospective revised stats, not archived as-of data",
+      "mae": 1.3021798848570503,
+      "interval_80_coverage": 0.8636363636363636,
+      "threshold_brier": 0.16515026761322252,
+      "validation_threshold": 2.5
+    },
+    "Anytime touchdown": {
+      "train_n": 6483,
+      "calibration_n": 2551,
+      "test_n": 2253,
+      "train_before": "2025-10-19T20:25:00+00:00",
+      "test_from": "2025-12-16T01:15:00+00:00",
+      "evaluation": "chronological held-out; retrospective revised stats, not archived as-of data",
+      "brier": 0.13715223839776264,
+      "base_rate_brier": 0.14897700941255654
+    }
+  },
+  "selection": {
+    "sport": "NFL",
+    "season": 2026,
+    "season_type": "REG",
+    "week": 4,
+    "date": null,
+    "view": "upcoming"
+  },
+  "opponent_sensitivity": {
+    "player_id": "NFL:nflverse:00-0035640",
+    "player": "DK Metcalf",
+    "market": "Receiving yards",
+    "actual_matchup": "PIT@CLE",
+    "counterfactual_matchup": "PIT@BUF",
+    "note": "Counterfactual only: same player, cutoff, home/away and rest; change opponent identity.",
+    "actual": {
+      "available": true,
+      "projected": 44.63560804899387,
+      "predictive_lower": 21.0,
+      "predictive_upper": 73.0,
+      "td_probability": null,
+      "td_rules": null,
+      "sample_size": 8,
+      "model_version": "matchup-ridge-empirical-v2:626aab3c77aa",
+      "feature_cutoff": "2026-09-29T22:00:00+00:00",
+      "source_retrieved_at": "2026-09-29T22:27:16.929604+00:00",
+      "last_input_game": "2026-09-29T00:15:00+00:00",
+      "inputs": {
+        "recent_stat": 34.876,
+        "recent_opportunities": 7.6,
+        "recent_efficiency": 7.189655172413793,
+        "workload_share": 0.2145872527875922,
+        "team_volume": 37.875,
+        "team_efficiency": 5.9405940594059405,
+        "opponent_efficiency_ratio": 0.9249123074221939,
+        "opponent_sack_rate": 0.06133333333333333,
+        "home": 0.0,
+        "rest_days": 4.0,
+        "recent_catches": 3.4,
+        "recent_yards": 36.4
+      },
+      "validation": {
+        "train_n": 5776,
+        "calibration_n": 2286,
+        "test_n": 2002,
+        "train_before": "2025-10-19T20:25:00+00:00",
+        "test_from": "2025-12-16T01:15:00+00:00",
+        "evaluation": "chronological held-out; retrospective revised stats, not archived as-of data",
+        "mae": 16.512409069495682,
+        "interval_80_coverage": 0.8036963036963037,
+        "threshold_brier": 0.18826966277469512,
+        "validation_threshold": 15.5
+      },
+      "factors": [
+        "Recent shrunk statistic 34.9; opportunities 7.6",
+        "Opponent opportunity/strength-adjusted efficiency ratio 0.925",
+        "Team volume 37.9; opponent sack rate 0.061",
+        "Away; 4 days rest"
+      ],
+      "uncertainties": [
+        "No current injury, starting-QB availability, routes/snaps, weather forecast or pregame spread inputs. Projections and EV are conditional on participation.",
+        "Past workload proxies role; no explicit injury adjustment. Historical source revisions may affect evaluation.",
+        "Empirical residual distribution assumes errors remain comparable; held-out validation is not a profitability claim."
+      ]
+    },
+    "counterfactual": {
+      "available": true,
+      "projected": 44.90944881889764,
+      "predictive_lower": 21.5,
+      "predictive_upper": 73.0,
+      "td_probability": null,
+      "td_rules": null,
+      "sample_size": 8,
+      "model_version": "matchup-ridge-empirical-v2:626aab3c77aa",
+      "feature_cutoff": "2026-09-29T22:00:00+00:00",
+      "source_retrieved_at": "2026-09-29T22:27:16.929604+00:00",
+      "last_input_game": "2026-09-29T00:15:00+00:00",
+      "inputs": {
+        "recent_stat": 34.876,
+        "recent_opportunities": 7.6,
+        "recent_efficiency": 7.189655172413793,
+        "workload_share": 0.2145872527875922,
+        "team_volume": 37.875,
+        "team_efficiency": 5.9405940594059405,
+        "opponent_efficiency_ratio": 0.9275754456246612,
+        "opponent_sack_rate": 0.05526315789473684,
+        "home": 0.0,
+        "rest_days": 4.0,
+        "recent_catches": 3.4,
+        "recent_yards": 36.4
+      },
+      "validation": {
+        "train_n": 5776,
+        "calibration_n": 2286,
+        "test_n": 2002,
+        "train_before": "2025-10-19T20:25:00+00:00",
+        "test_from": "2025-12-16T01:15:00+00:00",
+        "evaluation": "chronological held-out; retrospective revised stats, not archived as-of data",
+        "mae": 16.512409069495682,
+        "interval_80_coverage": 0.8036963036963037,
+        "threshold_brier": 0.18826966277469512,
+        "validation_threshold": 15.5
+      },
+      "factors": [
+        "Recent shrunk statistic 34.9; opportunities 7.6",
+        "Opponent opportunity/strength-adjusted efficiency ratio 0.928",
+        "Team volume 37.9; opponent sack rate 0.055",
+        "Away; 4 days rest"
+      ],
+      "uncertainties": [
+        "No current injury, starting-QB availability, routes/snaps, weather forecast or pregame spread inputs. Projections and EV are conditional on participation.",
+        "Past workload proxies role; no explicit injury adjustment. Historical source revisions may affect evaluation.",
+        "Empirical residual distribution assumes errors remain comparable; held-out validation is not a profitability claim."
+      ]
+    }
+  },
+  "weekly_checks": {
+    "games": 16,
+    "players": 861,
+    "unique_player_games": 861,
+    "duplicate_player_games": 0,
+    "quotes": 1705,
+    "aj_brown": [
+      {
+        "player_id": "NFL:nflverse:00-0035676",
+        "player": "A.J. Brown",
+        "team": "NE",
+        "game_id": "nflverse:2026_04_NE_BUF",
+        "opponent": "BUF",
+        "roster_status": "RES",
+        "roster_season": 2026,
+        "roster_week": 4,
+        "roster_retrieved_at": "2026-09-29T22:26:53.049476+00:00",
+        "markets": [
+          {
+            "market": "Receiving yards",
+            "forecast": {
+              "available": false,
+              "reason": "Roster status RES; availability unconfirmed. Projection withheld.",
+              "sample_size": 0
+            },
+            "quotes": [],
+            "line_status": "Line not posted"
+          },
+          {
+            "market": "Receptions",
+            "forecast": {
+              "available": false,
+              "reason": "Roster status RES; availability unconfirmed. Projection withheld.",
+              "sample_size": 0
+            },
+            "quotes": [],
+            "line_status": "Line not posted"
+          },
+          {
+            "market": "Anytime touchdown",
+            "forecast": {
+              "available": false,
+              "reason": "Roster status RES; availability unconfirmed. Projection withheld.",
+              "sample_size": 0
+            },
+            "quotes": [],
+            "line_status": "Line not posted"
+          }
+        ]
+      }
+    ]
+  }
+}

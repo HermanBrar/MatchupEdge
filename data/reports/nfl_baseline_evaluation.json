@@ -1,0 +1,30 @@
+{
+  "model_version": "nflverse-recency-baseline-v1",
+  "data_mode": "historical",
+  "metrics": {
+    "passing_yards": {
+      "sample_size": 34301,
+      "mae": 2.5327191627066297,
+      "rmse": 16.912112762607872,
+      "evaluation": "chronological rolling prior-5 mean"
+    },
+    "rushing_yards": {
+      "sample_size": 34301,
+      "mae": 2.4479781930555933,
+      "rmse": 9.396052221696443,
+      "evaluation": "chronological rolling prior-5 mean"
+    },
+    "receiving_yards": {
+      "sample_size": 34301,
+      "mae": 5.052323547418428,
+      "rmse": 13.529076540253694,
+      "evaluation": "chronological rolling prior-5 mean"
+    },
+    "receptions": {
+      "sample_size": 34301,
+      "mae": 0.3859566776478849,
+      "rmse": 0.9747267343088664,
+      "evaluation": "chronological rolling prior-5 mean"
+    }
+  }
+}
